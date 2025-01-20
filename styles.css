@@ -1,0 +1,507 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+ 
+
+/* Importing Poppins font from Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+ 
+
+/* Setting up the body with background image and general font */
+
+body {
+
+    font-family: 'Poppins', sans-serif; /* Clean and modern font */
+
+    background: url('bg.jpg') no-repeat center center/cover; /* Background image */
+
+    background-size: cover;
+
+    color: white;
+
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+ 
+
+/* Animation to make the page fade in */
+
+@keyframes fadeIn {
+
+    0% {
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+    }
+
+}
+
+ 
+
+body {
+
+    animation: fadeIn 2s ease-out;
+
+}
+
+ 
+
+/* Header section - ensuring it is centered properly */
+
+header {
+
+    text-align: center;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    padding: 20px;
+
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+
+    border-radius: 10px;
+
+    margin-top: 10px;
+
+    margin-bottom: 40px;
+
+    width: 80%;
+
+    max-width: 800px; /* Restricting max width */
+
+}
+
+ 
+
+/* Glitch effect for h1 and h2 */
+
+.glitch {
+
+    position: relative;
+
+    font-size: 3rem;
+
+    font-weight: bold;
+
+    color: white;
+
+    display: inline-block;
+
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.6); /* Added shadow for glow */
+
+}
+
+ 
+
+.glitch:before,
+
+.glitch:after {
+
+    content: attr(data-text);
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    color: #800080; /* Purple */
+
+    clip: rect(0, 900px, 0, 0);
+
+    animation: glitch-animation 0.8s infinite linear alternate-reverse;
+
+}
+
+ 
+
+.glitch:after {
+
+    left: 2px;
+
+    color: #8A2BE2; /* Slightly different shade of purple */
+
+    animation: glitch-animation-2 1s infinite linear alternate-reverse;
+
+}
+
+ 
+
+@keyframes glitch-animation {
+
+    0% {
+
+        transform: skew(-0.8deg);
+
+        left: 2px;
+
+    }
+
+    100% {
+
+        transform: skew(0.8deg);
+
+        left: -2px;
+
+    }
+
+}
+
+ 
+
+@keyframes glitch-animation-2 {
+
+    0% {
+
+        transform: skew(0.8deg);
+
+        left: -2px;
+
+    }
+
+    100% {
+
+        transform: skew(-0.8deg);
+
+        left: 2px;
+
+    }
+
+}
+
+ 
+
+/* Styling h1 with glitch effect */
+
+h1 {
+
+    font-size: 3rem;
+
+    color: white;
+
+    animation: shake 0.8s ease-in-out infinite; /* Shake effect */
+
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 15px rgba(255, 0, 255, 0.6); /* Glow effect for h1 */
+
+}
+
+ 
+
+/* Glitching for the subheading h2 */
+
+h2 {
+
+    font-size: 3.5rem;
+
+    color: #800080; /* Purple for visibility */
+
+    animation: glitch 1s ease-in-out infinite alternate;
+
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 15px rgba(255, 0, 255, 0.5); /* Added glow effect for h2 */
+
+}
+
+ 
+
+/* Create a shaking animation effect */
+
+@keyframes shake {
+
+    0% {
+
+        transform: translateX(0);
+
+    }
+
+    25% {
+
+        transform: translateX(-5px);
+
+    }
+
+    50% {
+
+        transform: translateX(5px);
+
+    }
+
+    75% {
+
+        transform: translateX(-5px);
+
+    }
+
+    100% {
+
+        transform: translateX(0);
+
+    }
+
+}
+
+ 
+
+/* Main content section (center-aligned) */
+
+main {
+
+    flex: 1;
+
+    padding: 30px;
+
+    background: rgba(0, 0, 0, 0.7); /* Darkened background for contrast */
+
+    backdrop-filter: blur(8px);
+
+    border-radius: 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    animation: fadeInMain 2s ease-in-out;
+
+    max-width: 90%; /* Ensure the content fits well */
+
+    text-align: center;
+
+}
+
+ 
+
+/* Fade-in for main content */
+
+@keyframes fadeInMain {
+
+    0% {
+
+        opacity: 0;
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+    }
+
+}
+
+ 
+
+/* Riddle and button section */
+
+.riddle-section {
+
+    font-size: 1.2rem;
+
+    animation: jitter 0.3s ease-in-out infinite; /* Adding jitter effect */
+
+    margin-bottom: 30px;
+
+}
+
+ 
+
+.riddle p {
+
+    font-size: 1.5rem;
+
+    margin-bottom: 15px;
+
+    color: #800080; /* Purple for visibility */
+
+    text-align: center;
+
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5); /* Glow effect */
+
+}
+
+ 
+
+/* Button with dramatic hover effects */
+
+button {
+
+    padding: 10px 20px;
+
+    background-color: #800080; /* Purple color */
+
+    color: white;
+
+    font-size: 1rem;
+
+    border: none;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+
+    animation: pulseButton 1s infinite alternate;
+
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.6); /* Glow effect for button text */
+
+}
+
+ 
+
+/* Button Hover Effects */
+
+button:hover {
+
+    background-color: #8A2BE2;
+
+    transform: scale(1.1); /* Button jumps up when hovered */
+
+}
+
+ 
+
+/* Countdown section with dramatic animation */
+
+.countdown-section p {
+
+    font-size: 2rem;
+
+    font-weight: bold;
+
+    color: #8A2BE2; /* Purple glow for urgency */
+
+    text-shadow: 0px 0px 15px rgba(138, 43, 226, 0.6); /* Subtle purple glow */
+
+    animation: countdownPulse 1.5s ease-in-out infinite alternate;
+
+}
+
+ 
+
+/* Countdown pulse effect */
+
+@keyframes countdownPulse {
+
+    0% {
+
+        text-shadow: 0 0 10px rgba(138, 43, 226, 0.8), 0 0 20px rgba(138, 43, 226, 0.8);
+
+    }
+
+    100% {
+
+        text-shadow: 0 0 20px rgba(138, 43, 226, 1), 0 0 40px rgba(138, 43, 226, 1);
+
+    }
+
+}
+
+ 
+
+/* Footer Styling */
+
+footer {
+
+    background-color: #222;
+
+    text-align: center;
+
+    padding: 15px;
+
+    color: #ccc;
+
+    margin-top: 40px;
+
+    width: 100%;
+
+    position: absolute;
+
+    bottom: 0;
+
+}
+
+ 
+
+footer p {
+
+    font-size: 1rem;
+
+}
+
+ 
+
+/* Glitch Effect for Riddle Text */
+
+@keyframes jitter {
+
+    0% {
+
+        transform: translateX(1px) translateY(0px);
+
+    }
+
+    50% {
+
+        transform: translateX(-1px) translateY(0px);
+
+    }
+
+    100% {
+
+        transform: translateX(1px) translateY(0px);
+
+    }
+
+}
+
+ 
+
+/* Pulsing effect for button */
+
+@keyframes pulseButton {
+
+    0% {
+
+        background-color: #800080;
+
+    }
+
+    100% {
+
+        background-color: #8A2BE2;
+
+    }
+
+}
